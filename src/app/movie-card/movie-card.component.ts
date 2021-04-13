@@ -1,4 +1,5 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { DirectorViewComponent } from '../director-view/director-view.component';
@@ -19,15 +20,12 @@ export class MovieCardComponent implements OnInit {
     public fetchApiData: FetchApiDataService,
     public dialog: MatDialog,
     public snackBar: MatSnackBar,
+    public router: Router,
     ) { }
 
   ngOnInit(): void {
     this.getFavorites();
     this.getMovies();
-  }
-
-  ngOnChanges(): void {
-
   }
 
   getMovies(): void {
@@ -89,5 +87,10 @@ export class MovieCardComponent implements OnInit {
         this.getFavorites();
       });
     }
+  }
+
+  logOutUser(): void {
+    this.snackBar.open("You have been logged out", 'OK', {duration: 2000});
+    this.router.navigate(['welcome']);
   }
 }

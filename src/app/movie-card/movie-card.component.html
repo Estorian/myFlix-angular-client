@@ -1,6 +1,33 @@
-<div style="display: flex;">
-    <mat-card *ngFor="let movie of movies; let i=index;">
-        <mat-card-header>
+<div 
+    style="
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: left;
+        align-content: center;
+        background-color: #3F51B5;
+        margin:auto
+        ">
+    <mat-toolbar style="margin-bottom: 20px">
+        <span>SickFlix by Estorian</span>
+        <span style="flex: 1 1 auto"></span>
+        <button
+            mat-icon-button
+            (click)="this.logOutUser()"
+        >
+            <mat-icon>logout</mat-icon>
+        </button>
+    </mat-toolbar>
+    <mat-card 
+        *ngFor="let movie of movies; let i=index;"
+        style="
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        ">
+        <mat-card-header style="justify-content: center; text-align: center;">
             <mat-card-title>{{movie.Title}}</mat-card-title>
             <mat-card-subtitle>Directed by: {{movie.Director.Name}}</mat-card-subtitle>
         </mat-card-header>

@@ -1,16 +1,24 @@
 <div class="main-page">
-    <h1>
-      Welcome to SickFlix!
+  <div class="front-display">  
+    <h1 class="display-2">
+        Welcome to SickFlix!
     </h1>
-    <button
-      mat-raised-button
-      (click)="openUserRegistrationDialog()"
-      style="margin-right: 10px;"
-      color="primary"
-    >Sign Up</button>
-    <button
-      mat-raised-button
-      (click)="openUserLoginDialog()"
-      color="primary"
-    >Login</button>
+    <h2>by Jason Lee</h2>
+    <div>
+      <button
+        mat-raised-button
+        (click)="openUserRegistrationDialog()"
+        style="margin-right: 10px;"
+        color="primary"
+      >Sign Up</button>
+      <button
+        mat-raised-button
+        (click)="openUserLoginDialog()"
+        color="primary"
+      >Login</button>
+    </div>
+    <p>This app was built using Angular</p>
+    <p>To see the code, please visit my GitHub:</p>
+    <a href="https://github.com/Estorian/myFlix-angular-client">https://github.com/Estorian/myFlix-angular-client</a>
   </div>
+</div>
