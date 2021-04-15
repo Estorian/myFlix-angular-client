@@ -3,6 +3,13 @@ import { UserRegistrationFormComponent } from '../user-registration-form/user-re
 import { UserLoginFormComponent } from '../user-login-form/user-login-form.component';
 import { MatDialog } from '@angular/material/dialog';
 
+
+/**
+ * This is the opening screen that a user wil see if they have
+ * not yet logged in. If they have logged in previously and already
+ * have a user token stored in their browser, they will be redirected
+ * to the MovieCardComponent.
+ */
 @Component({
   selector: 'app-welcome-page',
   templateUrl: './welcome-page.component.html',

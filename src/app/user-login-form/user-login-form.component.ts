@@ -5,7 +5,11 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
-
+/**
+ * This is a small form that takes the user's username and password
+ * and passes it to an API call to the database. If the login is
+ * successful, they willbe redirected to the MovieCardComponent.
+ */
 @Component({
   selector: 'app-user-login-form',
   templateUrl: './user-login-form.component.html',
